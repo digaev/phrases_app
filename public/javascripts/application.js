@@ -13,7 +13,7 @@ $(function() {
     $.getJSON('/', { exclude: ids }, function(data) {
       var content = $('#phrases tbody');
       $.each(data, function(i, obj) {
-        var tr = $('<tr >');
+        var tr = $('<tr />');
         tr.attr('data-phrase-id', obj.id);
         tr.append('<td>' + obj.id + '</td>');
         tr.append('<td>' + obj.body + '</td>');
