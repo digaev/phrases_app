@@ -1,5 +1,5 @@
 ```
-$ git clone
+$ git clone https://github.com/digaev/phrases_app
 $ cd phrases_app
 $ bundle install
 
