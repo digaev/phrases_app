@@ -6,7 +6,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @phrases.each_with_index do |phrase| %>
+    <% @phrases.each do |phrase| %>
       <tr data-phrase-id="<%= phrase.id %>">
         <td><%= phrase.id %>
         <td><%= phrase.body %></td>
