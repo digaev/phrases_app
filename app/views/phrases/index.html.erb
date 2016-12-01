@@ -1,0 +1,20 @@
+<table id="phrases" border="1">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @phrases.each_with_index do |phrase| %>
+      <tr data-phrase-id="<%= phrase.id %>">
+        <td><%= phrase.id %>
+        <td><%= phrase.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<button type="button" id="get-phrase">Get phrase</button>
