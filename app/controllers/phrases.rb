@@ -3,7 +3,9 @@ PhrasesApp::App.controllers :phrases do
     @phrases = Phrase.limit(1).order('RANDOM()')
     if params[:exclude].present?
       @phrases = @phrases.where.not(
-        body: Phrase.select(:body).where(id: params[:exclude].split(','))
+        body: Phrase.select(:body).where(
+          id: params[:exclude].split(',')
+        ).distinct
       )
     end
 
