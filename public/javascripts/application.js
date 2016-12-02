@@ -8,7 +8,7 @@ $(function() {
 
     $.getJSON('/', function(data) {
       var content = $('#phrases tbody');
-      
+
       $('tr td.phrase-body', content).map(function(i, el) {
         var text = $(el).text();
         for (var n = data.length - 1; n >= 0; --n) {
