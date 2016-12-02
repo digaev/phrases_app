@@ -8,13 +8,11 @@ $(function() {
 
     $.getJSON('/', function(data) {
       var content = $('#phrases tbody');
-      var phrases = $('tr td.phrase-body', content).map(function(i, el) {
-        return $(el).text();
-      }).get();
-
-      $.each(phrases, function(i, phrase) {
+      
+      $('tr td.phrase-body', content).map(function(i, el) {
+        var text = $(el).text();
         for (var n = data.length - 1; n >= 0; --n) {
-          if (data[n].body === phrase) {
+          if (data[n].body === text) {
             data.splice(n, 1);
           }
         }
