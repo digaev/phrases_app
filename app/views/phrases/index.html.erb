@@ -7,9 +7,9 @@
   </thead>
   <tbody>
     <% @phrases.each do |phrase| %>
-      <tr data-phrase-id="<%= phrase.id %>">
+      <tr>
         <td><%= phrase.id %>
-        <td><%= phrase.body %></td>
+        <td class="phrase-body"><%= phrase.body %></td>
       </tr>
     <% end %>
   </tbody>
